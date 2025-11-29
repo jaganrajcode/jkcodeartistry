@@ -1,0 +1,14 @@
+C:\Users\jagan\source\repos\solid_principles\solid_principles\bin\Debug\net10.0\solid_principles.exe
+C:\Users\jagan\source\repos\solid_principles\solid_principles\bin\Debug\net10.0\solid_principles.deps.json
+C:\Users\jagan\source\repos\solid_principles\solid_principles\bin\Debug\net10.0\solid_principles.runtimeconfig.json
+C:\Users\jagan\source\repos\solid_principles\solid_principles\bin\Debug\net10.0\solid_principles.dll
+C:\Users\jagan\source\repos\solid_principles\solid_principles\bin\Debug\net10.0\solid_principles.pdb
+C:\Users\jagan\source\repos\solid_principles\solid_principles\obj\Debug\net10.0\solid_principles.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jagan\source\repos\solid_principles\solid_principles\obj\Debug\net10.0\solid_principles.AssemblyInfoInputs.cache
+C:\Users\jagan\source\repos\solid_principles\solid_principles\obj\Debug\net10.0\solid_principles.AssemblyInfo.cs
+C:\Users\jagan\source\repos\solid_principles\solid_principles\obj\Debug\net10.0\solid_principles.csproj.CoreCompileInputs.cache
+C:\Users\jagan\source\repos\solid_principles\solid_principles\obj\Debug\net10.0\solid_principles.dll
+C:\Users\jagan\source\repos\solid_principles\solid_principles\obj\Debug\net10.0\refint\solid_principles.dll
+C:\Users\jagan\source\repos\solid_principles\solid_principles\obj\Debug\net10.0\solid_principles.pdb
+C:\Users\jagan\source\repos\solid_principles\solid_principles\obj\Debug\net10.0\solid_principles.genruntimeconfig.cache
+C:\Users\jagan\source\repos\solid_principles\solid_principles\obj\Debug\net10.0\ref\solid_principles.dll

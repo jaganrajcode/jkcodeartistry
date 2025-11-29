@@ -1,2 +1,0 @@
-# jkcodeartistry
-Code Repo Collection

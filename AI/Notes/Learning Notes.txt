@@ -1,0 +1,176 @@
+GenAI Quick Notes:
+==================
+
+[ Artificial intelligence [ Machine Learning [ Deep Learning  [ LLM [ GenAI]]]]
+
+Artificial intelligence : Machine that mimics human intelligence & behaviour
+Machine Learning        : Machine that learns from the data automatically w.r.t a particular task and performance measure  
+Deep Learning           : Subset of ML, learning happens via algorithms inspired by neural networks in human brain
+LLM [GenAI]             : Subset of DL, creating new content from existing ones using advanced algorithms
+
+Legacy and Terms
+
+Artificial Neural Network (ANN) :  
+---------------------------------
+An artificial neural network architecture comprising interconnected input, hidden, and output
+layers containing artificial neurons, facilitating the learning of complex relationships between
+input and output data
+
+limitations: Cannot accommodate inputs of different length, The number of parameters to learn increases with input length ; more computational cost
+
+Recurrent Neural Networks (RNNs):
+-------------------------------
+Recurrent Neural Networks (RNNs) overcome the problems encountered by ANNs. RNNs use ‘modified’ cells that use a step-by-step approach for making predictions.
+A 'state' commputed at each step is used as an input to the next step.
+
+limitation:
+-----------
+RNNs cannot effectively capture long-term dependencies. The model starts to ‘forget’ information as new information keeps getting added
+RNNs compute one state at a time - State 2 depends on State 1, State 3 depends on State 2, … This increases training time and computation cost.
+Also One of the limitations of RNNs was their inability to effectively capture long-term dependencies
+
+But what about the following sentiment of match example?
+“The first half of the match was great, but then it was a bit of a bad.”
+This review is neutral in nature
+If the model ‘forgets’ the initial part, it will probably tag this as a negative match
+
+The Transformer Model ( GPT ):
+-------------------------------
+Transformers are a type of neural network architecture. Transformers were introduced in a paper by Vaswani et al. in 2017. "Attention all you need"
+Transformers are based on the idea of self-attention.
+Transformers consist of an encoder and a decoder. The encoder takes in a sequence of tokens (e.g. words or characters) and outputs a latent representation. The decoder then takes this latent representation as input and outputs a sequence of tokens
+
+Transformer - Encoder:
+---------------------
+[Multi-head Attention]: A stack of self-attention layers that allows the Encoder to attend to different parts of the input sequence simultaneously.
+[Feedforward Neural Network]: Processes the outputs of the Multi-head Attention layer using a standard fully connected neural network 
+[Residual Connections and Layer Normalization]: Improves the flow of information through the Encoder and are added after each sub-layer.
+[Positional Encoding]: Typically added to the input embeddings of the Encoder to provide positional information for words 
+
+Each word in the sentence can be represented by a vector. It has attention score to compute the likeability of a word. One way to compute the attention score would be to take a ‘dot product’ of a word in the sentence with all other words, and then use softmax to bring all values to the same range. As we computed the association of words
+within the sentence, this is known as self attention. A single self-attention layer might not be able to capture many grammatical nuances, So, we use multiple self-attention layers - a multi-head attention layer
+
+Transformer - Decoder:
+---------------------
+[Masked Multi-head Attention]: This layer ensures that the model can only pay attention to the current and previous inputs - prevents it from "peeking" at future inputs
+[Linear and Softmax Layer]: Each word is assigned a probability score based on how likely it is to be the next word in the output
+
+Transformers have revolutionized NLP, demonstrating state-of-the-art performance across multiple NLP tasks with Contextual Understanding, Scalability and
+Performance.
+ Contextual Understanding : Attention Mechanism, Positional Encoding
+ Scalability and Performance: Computation Parallelization, Residual Connections
+
+LLM:
+----
+Large Language Models (LLMs) are powerful AI models trained on massive amounts of data to learn the complex patterns and rules of human language, 
+allowing them to perform a wide variety of tasks
+
+expect: Good Articulation, General Knowledge, Creativity and Diversity
+dont expect: Domain Knowledge, Guardrails, Consistent Accuracy
+
+Training of Large Language Models (LLMs)
+* Pre-training
+* Supervised fine-tuning
+* Reinforcement Learning with Human Feedback
+
+Evolution
+1986 –Geoffrey Hinton’s Backpropagation
+1990-2015 -Sequential Neural Networks (RNNs) 
+2017 –Attention is All You Need
+
+Generative AI
+=============
+Generative AI models, each designed to address specific challenges and applications
+can be broadly categorized into:
+
+1. Transformer-based models - Two categories:
+	a. Scratch-trained models
+	b. Pre-trained models
+2. Large language models - Base LLM & RLHF ( Reinforcement Learning Through Human Feedback )
+3. Code generation tools - VALL-E, resemble.ai
+4. Audio generation tools
+5. Image generators - Generate coherent image completions and samples when trained on pixel sequences - Image GPT by OpenAI
+
+Autonomy -  Do not rely on pre-programmed rules or step-by-step instructions and can independently
+handle complex scenarios relying on reasoning afforded by LLMs.
+
+Perception - Use text-based or multimodal inputs and interactions with other systems or users to
+perceive their environment.
+
+Action - Designed to achieve specific, pre-defined goals by
+autonomously breaking down complex tasks into smaller steps.
+
+Goal-Oriented Behavior - Determine the best course of action and execute tasks to fulfil their goals. Task execution is
+achieved by selecting, sequencing and calling a set of tools available to the
+
+Generative Pre-Trained Transformer ( GPT )
+===========================================
+It can not only write texts, but also do other things with words, such as answering questions, summarizing texts, translating
+languages, and writing code. It can do this by using a special technique called deep learning, which is a way of making the
+computer learn from data and improve itself
+
+It is a deep learning model which has many layers of calculations that process the words and their meanings.
+* It also has a large “memory” that stores all the words and information it has learned.
+* When you give a GPT model a prompt, it uses its memory and calculations to find the best way to continue the text or perform the task.
+* It does this by looking for the most likely words or sentences that match the prompt and the context.
+
+Foundation Models =>
+-------------------- 
+Large Language Models (LLMs)
+Large Multimodal Models (LMMs)
+Reasoning Models
+
+Paid: ( platform: Azure, AWS, Google )
+Google: Gemini
+OpenAI: GPT-4o, o1/o3
+Anthropic: Claude
+Cohere: Command
+
+Open: ( Platform: anyscale, groq, together.ai )
+Meta AI: Llama
+Mistral AI: Mistral, Mixtral
+Alibaba Cloud: Qwen
+
+Accessing Large Language Models (LLMs):
+----------------------------------------
+Access: ( open models for specific target devices )
+Hugging Face
+Llama Cpp
+Unsloth
+
+Server: ( compatible with OpenAI APIs )
+vLLM
+Ollama
+
+[LLM inference] is the process where a trained Large Language Model generates human-like text or other outputs (like code, summaries, translations) in response to a user's input (prompt)
+
+GenerativeAI Application Building Blocks
+
+Layer 1: Foundation | Hardware(Nvidia, Azure) | Foundation Models(OpenAI, Anthropic, Meta)
+Layer 2: Data | Databases(PostgreSQL, Pinecone) | Data Pipelines (Databricks, Nomic)
+Layer 3: Tooling | Prompt/Agent Frameworks(LangChain, Crew) | Monitoring(LangSmith, Weave) | Integration(Open Router, Martian)
+
+Prompt Templates
+* Zero-Shot
+* Few-Shot
+* Chain-of-Thought: Chain-of-Thought (CoT) prompts encourage the model to articulate step-by-step reasoning before providing a final answer.
+* Prompt Chaining: Prompt chains break down complex tasks into a series of steps, with the output of each step serving as the input for the next.
+* Self-Consistency: Self-consistent prompts generate multiple answers to the same question and pick the answer that is repeated the most across these occurrences
+* Rephrase and Respond: Ask the LLM to rephrase the user question for better answering.
+* LLM-as-a-Judge: LLM-as-a-judge prompts serve as a template for using one LLM to evaluate the output of another LLM
+
+Prompt Structure:
+
+[System/Developer Message] Clear instructions explaining the task that the LLM should accomplish. These instructions are agnostic to the user input and
+appended to the user input with higher priority. Can also be used to prime LLM behavior.
+
+[User Message*] Specific instructions from the user describing the task that needs to be accomplished.
+
+[Assistant Message] Can be used to showcase expected completions in multi-turn conversations.
+
+Prompt Parameters
+=================
+Max Output Length: Length of output
+Temperature: More temperature = More randomness in response
+Top P: More Top P = More tokens selected for completion
+Frequency Penalty (FP): More FP = Less chance of tokens repeating
